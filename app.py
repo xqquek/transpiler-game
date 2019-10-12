@@ -1,6 +1,5 @@
 import pygame, sys
 from pygame.locals import *
-from utils.scene import Scene
 
 pygame.init()
 
@@ -22,7 +21,6 @@ circx = 0
 circy = 0
 direction = 'left'
 gameover = False
-scene = Scene()
 
 font_obj = pygame.font.Font('freesansbold.ttf', 32)
 fail_text = font_obj.render('You failed', True, green, blue)
@@ -76,7 +74,6 @@ while True: # the main game loop
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_r:
                     print("restarting")
-                    reset(screen)
 
         fpsClock.tick(FPS)
         pygame.display.update()
